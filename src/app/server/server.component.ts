@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './server.component.html',
   styles: ['p {color: green}'],
 })
-export class ServerComponent {}
+export class ServerComponent {
+  serverId: number = 10;
+  serverStatus: String = 'Online';
+
+  getServerStatus() {
+    return this.serverStatus;
+  }
+}
