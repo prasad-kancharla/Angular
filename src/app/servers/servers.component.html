@@ -12,6 +12,7 @@
   Add Server
 </button>
 <!-- String Interpolation -->
-<p>{{ serverCreationStatus }}</p>
+<!-- Add structural directive ngIf -->
+<p *ngIf="serverCreated">{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>

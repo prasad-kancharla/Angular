@@ -12,9 +12,11 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer: boolean = false;
   serverName = 'Tomcat';
+  serverCreated = false;
 
   serverCreationStatus: String = 'No server is created';
   onServerCreation() {
+    this.serverCreated = true;
     this.serverCreationStatus =
       'New server is created with name' + this.serverName;
   }
