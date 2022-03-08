@@ -11,14 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowNewServer: boolean = false;
-  serverName = 'Tomcat';
+  serverName = 'local server';
   serverCreated = false;
+  servers = ['Tomcat', 'Jboss'];
 
   serverCreationStatus: String = 'No server is created';
   onServerCreation() {
     this.serverCreated = true;
     this.serverCreationStatus =
       'New server is created with name ' + this.serverName;
+    this.servers.push(this.serverName);
   }
 
   onUpdateServerName(event: any) {
